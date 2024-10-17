@@ -4,12 +4,12 @@
 
 This project implements an assembler for a custom machine with a memory size of 4096 bytes and 8 registers. Each byte in memory consists of 15 bits, and the assembler translates assembly code into machine language for this custom architecture. The assembler works in two main phases:
 ### Requirements:
-    Pass 1 (First Pass): In the first pass, the assembler processes the input file to:
+Pass 1 (First Pass): In the first pass, the assembler processes the input file to:
         Expand and validate macros.
         Identify and validate labels.
         Parse different types of instructions.
         Store necessary data in appropriate data structures for the second pass.
-    Pass 2 (Second Pass): The assembler then takes the information gathered from the first pass and:
+Pass 2 (Second Pass): The assembler then takes the information gathered from the first pass and:
         Translates assembly instructions and data into 15-bit machine code.
         Resolves label addresses.
         Outputs the necessary files for machine execution, including object, entry, and extern files.
@@ -18,29 +18,29 @@ This project implements an assembler for a custom machine with a memory size of 
 
 This assembler supports various assembly commands, including:
 
-    **Data Instructions:**
-        .data - Used for declaring numerical data.
-        .string - Used for defining strings stored as ASCII values.
-        .extern - Declares external labels used in other files.
-        .entry - Marks labels as entry points that can be accessed externally.
+**Data Instructions:**
+.data - Used for declaring numerical data.
+.string - Used for defining strings stored as ASCII values.
+.extern - Declares external labels used in other files.
+.entry - Marks labels as entry points that can be accessed externally.
 
-    **Command Instructions:**
-        mov - Move data between registers or memory.
-        cmp - Compare two operands.
-        add, sub - Perform addition or subtraction between two operands.
-        lea - Load effective address.
-        clr, not, inc, dec - Clear, invert, increment, or decrement a value.
-        jmp, bne, jsr - Jump to address, branch if not equal, or jump to subroutine.
-        red, prn - Read from input or print data.
-        rts, stop - Return from subroutine or stop the program execution.
+**Command Instructions:**
+mov - Move data between registers or memory.
+cmp - Compare two operands.
+add, sub - Perform addition or subtraction between two operands.
+lea - Load effective address.
+clr, not, inc, dec - Clear, invert, increment, or decrement a value.
+jmp, bne, jsr - Jump to address, branch if not equal, or jump to subroutine.
+red, prn - Read from input or print data.
+rts, stop - Return from subroutine or stop the program execution.
 
 ## Output:
 
 **The assembler generates the following output files:**
 
-    Object File (.ob) - Contains the machine code translated from the assembly instructions.
-    Entry File (.ent) - Contains entries for labels marked with the .entry directive.
-    Extern File (.ext) - Contains information for labels marked with the .extern directive.
+**Object File (.ob)** - Contains the machine code translated from the assembly instructions.
+**Entry File (.ent)** - Contains entries for labels marked with the .entry directive.
+**Extern File (.ext)** - Contains information for labels marked with the .extern directive.
 
 ## Directory Structure
 Assembler_Project/ ├── assembler/ │ ├── assembler.c │ ├── assembler.h │ ├── assembler.o │ ├── data.c │ ├── data.h │ ├── data.o │ ├── entry_extern.c │ ├── entry_extern.h │ ├── entry_extern.o │ ├── first_pass.c │ ├── first_pass.h │ ├── first_pass.o │ ├── general_functions.c │ ├── general_functions.h │ ├── general_functions.o │ ├── instructions.c │ ├── instructions.h │ ├── instructions.o │ ├── label.c │ ├── label.h │ ├── label.o │ ├── makefile │ ├── pre_assembler.c │ ├── pre_assembler.h │ ├── pre_assembler.o │ ├── second_pass.c │ ├── second_pass.h │ ├── second_pass.o │ ├── util_instructions.c │ ├── util_instructions.h │ ├── util_instructions.o │ ├── util_pre_assembler.c │ ├── util_pre_assembler.h │ └── util_pre_assembler.o ├── invalid_input/ └── valid_input/
@@ -119,11 +119,11 @@ Assembler_Project/ ├── assembler/ │ ├── assembler.c │ ├── 
 ## Usage
 **To compile the assembler, run:**
 
-make
+    make
 
 **To execute the assembler, use:**
 
-./assembler [input_file]
+    ./assembler [input_file]
 
 ## Contributing
 
