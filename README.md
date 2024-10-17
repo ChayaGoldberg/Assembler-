@@ -79,9 +79,11 @@ Assembler_Project/ ├── assembler/ │ ├── assembler.c │ ├── 
 
 ## Usage
 **To compile the assembler, run:**
+
 make
 
 **To execute the assembler, use:**
+
 ./assembler [input_file]
 
 ## Contributing
