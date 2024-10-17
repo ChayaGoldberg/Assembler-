@@ -6,21 +6,21 @@ This project implements an assembler for a custom machine with a memory size of 
 ### Requirements:
 Pass 1 (First Pass): In the first pass, the assembler processes the input file to:
 
-        Expand and validate macros.
+Expand and validate macros.
         
-        Identify and validate labels.
+Identify and validate labels.
         
-        Parse different types of instructions.
+Parse different types of instructions.
         
-        Store necessary data in appropriate data structures for the second pass.
+Store necessary data in appropriate data structures for the second pass.
         
 Pass 2 (Second Pass): The assembler then takes the information gathered from the first pass and:
 
-        Translates assembly instructions and data into 15-bit machine code.
+Translates assembly instructions and data into 15-bit machine code.
 
-        Resolves label addresses.
+Resolves label addresses.
         
-        Outputs the necessary files for machine execution, including object, entry, and extern files.
+Outputs the necessary files for machine execution, including object, entry, and extern files.
         
 
 ### Assembly Instructions Supported:
