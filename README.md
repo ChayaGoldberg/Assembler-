@@ -1,4 +1,50 @@
 # Assembler Project
+## Project Overview
+
+This project implements an assembler for a custom machine with a memory size of 4096 bytes and 8 registers. Each byte in memory consists of 15 bits, and the assembler translates assembly code into machine language for this custom architecture.
+
+### Requirements
+- **Pass 1 (First Pass)**: The assembler processes the input file to expand and validate macros, identify and validate labels, parse different types of instructions, and store necessary data for the second pass.
+- **Pass 2 (Second Pass)**: The assembler translates assembly instructions and data into 15-bit machine code, resolves label addresses, and outputs the necessary files for machine execution.
+
+### Assembly Instructions Supported
+The assembler supports various assembly commands including:
+- **Data Instructions**: `.data`, `.string`, `.extern`, `.entry`
+- **Command Instructions**: `mov`, `cmp`, `add`, `sub`, `lea`, `clr`, `jmp`, `red`, `prn`, `rts`, `stop`
+
+### Output
+The assembler generates:
+- **Object File (.ob)**
+- **Entry File (.ent)**
+- **Extern File (.ext)**
+
+## Directory Structure
+
+Assembler_Project/
+├── assembler/
+│   ├── assembler.c
+│   ├── assembler.h
+│   ├── data.c
+│   ├── data.h
+│   ├── entry_extern.c
+│   ├── entry_extern.h
+│   ├── first_pass.c
+│   ├── first_pass.h
+│   ├── general_functions.c
+│   ├── general_functions.h
+│   ├── instructions.c
+│   ├── instructions.h
+│   ├── label.c
+│   ├── label.h
+│   ├── makefile
+│   ├── pre_assembler.c
+│   ├── pre_assembler.h
+│   ├── second_pass.c
+│   ├── second_pass.h
+│   ├── util_instructions.c
+│   ├── util_instructions.h
+│   ├── util_pre_assembler.c
+│   ├── util_pre_assembler.h
 
 ## Overview
 
